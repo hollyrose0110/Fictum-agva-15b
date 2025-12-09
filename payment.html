@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Precision Pencil Co. | Make a Payment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <ul class="nav-menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#">Products & Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="payment.html">Make a Payment</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-wrapper">
+    <h1>Make a Payment</h1>
+
+    <form 
+      class="contact-form"
+      action="https://us-central1-alhsofunctions.cloudfunctions.net/alhsoFormExample"
+      method="POST"
+    >
+      <!-- Contact Info Fieldset -->
+      <fieldset>
+        <legend>Contact Info</legend>
+
+        <label for="name">Full Name:</label>
+        <input id="name" type="text" name="user-name" required />
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="user-email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input id="phone" type="tel" name="user-phone" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Payment Info</legend>
+
+        <label for="card-type">Card Type:</label>
+        <select id="card-type" name="card-type" required>
+          <option value="">--Select Card--</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+        </select>
+
+        <label for="card-number">Card Number:</label>
+        <input id="card-number" type="text" name="card-number" pattern="\d{13,16}" placeholder="Numbers only" required />
+
+        <label for="exp-date">Expiration Date:</label>
+        <input id="exp-date" type="month" name="exp-date" required />
+
+        <label for="cvv">CVV:</label>
+        <input id="cvv" type="text" name="cvv" pattern="\d{3,4}" placeholder="3 or 4 digits" required />
+      </fieldset>
+
+      <button type="submit" class="form-btn">Submit Payment</button>
+    </form>
+  </div>
+
+</body>
+</html>
