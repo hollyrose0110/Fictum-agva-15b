@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, 
+  initial-scale=1.0" />
+  <title>Precision Pencil Co. | Contact Us</title>
+  <div style="text-align: center; margin-top: 30px;">
+  <a href="payment.html" class="btn">Make a Payment</a>
+</div>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="nav-bar">
+    <ul class="nav-menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="#">Products & Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-wrapper">
+
+    <div class="contact-columns">
+
+      <div class="contact-col">
+        <h2>Location</h2>
+        <p>471 Kyla Way, Shaneville, CT 29553</p>
+
+        <p><strong>Phone:</strong> 822-913-9182</p>
+        <p><strong>Email:</strong> info@precisionpencil.com</p>
+      </div>
+
+      <div class="contact-col">
+        <h2>Hours of Operation</h2>
+        <p><strong>Mon–Fri:</strong> 10am – 5pm</p>
+        <p><strong>Sat:</strong> 12pm – 5pm</p>
+      </div>
+
+    </div>
+
+    <form 
+      class="contact-form"
+      action="https://us-central1-alhsofunctions.cloudfunctions.net/alhsoFormExample"
+      method="POST"
+    >
+
+      <label for="name">Name:</label>
+      <input id="name" type="text" name="user-name" required />
+
+      <label for="email">E-mail:</label>
+      <input id="email" type="email" name="user-email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="user-message" rows="5" required></textarea>
+
+      <button type="submit" class="form-btn">Send your message</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
