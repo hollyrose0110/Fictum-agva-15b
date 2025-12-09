@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #fcf8f4; 
+  color: #4a3620; 
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #7b4f33; 
+  color: #fff;
+  padding: 0.7em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1em;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #a67c52; 
+  transform: translateY(-2px);
+}
+
+.nav-bar {
+  background-color: #7b4f33; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 10px; 
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu a:hover {
+  color: #7b4f33; 
+  background-color: #d8c5aa; 
+  transform: scale(1.05);
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 3px;
+  background-color: #7b4f33; 
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after {
+  width: 60%;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 250px;
+}
+
+.logo {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.main-content {
+  flex: 3;
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.feature-box {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.feature-box:nth-child(1) {
+  background-color: #a67c52; 
+}
+
+.feature-box:nth-child(2) {
+  background-color: #cbb495; 
+}
+
+.feature-box h2 {
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  margin-bottom: 15px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-column h2 {
+  margin-bottom: 15px;
+  color: #7b4f33;
+}
+
+.contact-column p {
+  margin-bottom: 10px;
+}
+.contact-wrapper {
+  max-width: 900px;
+  background: #ffffff;
+  margin: 50px auto;
+  padding: 40px 50px;
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+}
+
+.contact-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #e0d8c8;
+}
+
+.contact-col h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  color: #7b4f33;
+  letter-spacing: 0.5px;
+}
+
+.contact-col p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #4a3620;
+}
+
+.contact-col strong {
+  color: #7b4f33;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #7b4f33;
+  font-size: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #faf7f2;
+  border: 1px solid #d8c5aa;
+  border-radius: 10px;
+
+  font-size: 15px;
+  resize: vertical;
+
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #a67c52;
+  box-shadow: 0 0 5px rgba(166, 124, 82, 0.3);
+}
+
+.form-btn {
+  width: fit-content;
+  padding: 10px 22px;
+  background: #7b4f33;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: background 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+}
+
+.form-btn:hover {
+  background: #a67c52;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e9edf1;
+}
+
+.contact-container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.info-box {
+  width: 45%;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-box h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  transition: 0.25s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2b7a8a;
+  outline: none;
+  box-shadow: 0 0 6px rgba(32, 109, 124, 0.4);
+}
+
+.send-btn {
+  margin-top: 10px;
+  width: fit-content;
+  padding: 12px 22px;
+  background: #2b7a8a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.25s;
+}
+
+.send-btn:hover {
+  background: #1d5a66;
+}
+
+@media (max-width: 700px) {
+  .info-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+}
+.hide-btn {
+  display: block;
+  margin: 20px auto 0; 
+  padding: 12px 28px;
+  background-color: #a67c52; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hide-btn:hover {
+  background-color: #8c6542; 
+  transform: scale(1.05);
+}
